@@ -25,6 +25,21 @@ fun main() {
             sum += part.toInt()
         }
     }
+
+    // 커스텀 구분자를 가지는 경우(정상 값 입력,커스텀 구분자가 여러 글자인 경우와 숫자가 십의 자리 수 이상인 경우도 고려해봄)
+    else if (input[0] == '/' && input[1] == '/') {
+        // 커스텀 구분자를 지정하여 문자열을 전달하는 경우(//와 \n 사이에 입력)
+        val start = 2 //구분자의 시작 인덱스
+        val end = input.indexOf("\\n") // \n의 시작 인덱스
+        //커스텀 연산자 파악
+        separator = input.substring(start, end)
+        //숫자 더하기 시작
+        val part = input.substring(end+2,input.length)
+        val parts = part.split(separator)
+        for(p in parts){
+            sum += p.toInt()
+        }
+    }
 }
 
 
