@@ -11,6 +11,12 @@ fun main() {
     println("덧셈할 문자열을 입력해 주세요.")
     val input: String? = readLine()
 
+    // 입력을 하지 않거나 엔터만 입력한 경우
+    if (input.isNullOrEmpty()) {
+        println("결과 : $sum")
+        return
+    }
+
 }
 
 
