@@ -17,6 +17,14 @@ fun main() {
         return
     }
 
+    // 쉼표 또는 콜론을 구분자로 가지는 문자열을 전달하는 경우(정상 값 입력,숫자가 십의 자리 수 이상인 경우도 고려해봄)
+    if (input.contains(',')||input.contains(':')) {
+        // input 값을 쉼표와 콜론을 기준으로 쪼개서 저장해두고
+        val parts = input.split(',',':')
+        for(part in parts){
+            sum += part.toInt()
+        }
+    }
 }
 
 
