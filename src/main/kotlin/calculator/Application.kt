@@ -40,6 +40,13 @@ fun main() {
             sum += p.toInt()
         }
     }
+
+
+    // 잘못된 값을 입력하는 경우(숫자, ,(쉼표), :(콜론), // , \n 외의 문자열이 입력된 경우)
+    else{
+        throw IllegalArgumentException()
+    }
+    println("결과 :  $sum")
 }
 
 
